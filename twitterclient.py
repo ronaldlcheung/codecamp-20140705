@@ -5,14 +5,14 @@ from twitter import *
 
 
 def main(args):
-    CONSUMER_KEY = 'VFiH5Wp3NG9Vo0zzBRt8kikQG'
-    CONSUMER_SECRET = 'AqdI0p1gLMFDOIhMnoqJmntdQBRAYaB3I5qjDlW5I0xqPQAhl3'
+    CONSUMER_KEY = ''
+    CONSUMER_SECRET = ''
     MY_TWITTER_CREDS = ''
-    APP_NAME = 'ronald_devcon_demo'
+    APP_NAME = ''
 
     MY_TWITTER_CREDS = os.path.expanduser('./my_app_credentials')
     if not os.path.exists(MY_TWITTER_CREDS):
-        oauth_dance("My App Name", CONSUMER_KEY, CONSUMER_SECRET,
+        oauth_dance('', CONSUMER_KEY, CONSUMER_SECRET,
                         MY_TWITTER_CREDS)
 
     oauth_token, oauth_secret = read_token_file(MY_TWITTER_CREDS)
